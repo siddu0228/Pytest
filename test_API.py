@@ -10,5 +10,8 @@ def test_get_user():
     response = api_client.get_user(2)
     assert response.status_code == 200
     assert response.json()['data']['id'] == 2
+def test_get_users():
+    assert api_client.add(2) == 4
+    
 
 
